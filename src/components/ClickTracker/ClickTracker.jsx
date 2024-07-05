@@ -1,15 +1,11 @@
-import { useState } from "react"
 
-const ClickTracker = ({children}) => {
 
-const [clicks, setClicks] = useState(0);
+const ClickTracker = ({children, value, onTrack}) => {
 
-const handleCliks = ()  =>{
-  setClicks(clicks + 1)
-}
+
 
 return (
-  <button onClick={handleCliks}>{children}{clicks}</button>
+  <button onClick={onTrack}>{children}{value}</button>
 )
 }
 
