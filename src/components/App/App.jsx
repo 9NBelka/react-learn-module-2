@@ -1,12 +1,16 @@
 
+import ClickTracker from "../ClickTracker/ClickTracker";
 import Reader from "../Reader/Reader";
 
 function App() {
   
   return(
-    <div>
-      <Reader />
-    </div>
+    // <div>
+    //   <Reader />
+    // </div>
+    <>
+      <ClickTracker />
+    </>
   )
 }
 
