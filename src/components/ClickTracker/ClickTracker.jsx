@@ -5,9 +5,14 @@ const ClickTracker = () => {
   const [clicks, setClicks] = useState(0);
   const [newDate, setNewDate] = useState(Date.now());
 
-  useEffect(() =>{
-    console.log("clicks + 1",clicks)
-  }, [clicks])
+  // useEffect(() =>{
+  //   console.log("clicks + 1",clicks)
+  // }, [clicks])
+
+  useEffect(()=>{
+    localStorage.setItem('my-clicks', clicks);
+    console.log("new item")
+  },[clicks])
 
   // " " монтирование, обновление размонтирование, выполняется при каждом событии если нет массива. Размонтирование это удаление компонена, например PopUp
   // [] монтирование, выполняется один раз, при первом появлении компонента

@@ -1,12 +1,12 @@
 
-// import ClickTracker from "../ClickTracker/ClickTracker";
+import ClickTracker from "../ClickTracker/ClickTracker";
 // import Reader from "../Reader/Reader";
 
-import { useState } from "react"
-import Timer from "../Timer/Timer"
+// import { useState } from "react"
+// import Timer from "../Timer/Timer"
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
 
   return(
@@ -14,9 +14,9 @@ function App() {
     //   <Reader />
     // </div>
     <>
-      {/* <ClickTracker /> */}
-      <button onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide' : "show"}</button>
-      {isVisible && <Timer /> }
+      <ClickTracker />
+      {/* <button onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide' : "show"}</button>
+      {isVisible && <Timer /> } */}
     </>
   )
 }
