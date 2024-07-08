@@ -2,7 +2,14 @@ import { useEffect } from "react"
 import { useState } from "react"
 
 const ClickTracker = () => {
-  const [clicks, setClicks] = useState(0);
+  const [clicks, setClicks] = useState(() =>{
+    const savedClicks = window.localStorage.getItem("my-clicks"); //присваиваем новой переменной значение из хранилища
+    
+    if (savedClicks !== null) {
+      return JSON.parse(savedClicks);
+    }
+    return 0; //первое значение клика
+  });
   const [newDate, setNewDate] = useState(Date.now());
 
   // useEffect(() =>{
