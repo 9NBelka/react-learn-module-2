@@ -30,6 +30,7 @@ const ClickTracker = () => {
 return (
   <>
     <button onClick={() => setClicks(clicks + 1)}>clicks: {clicks}</button>
+    <button onClick={() => setClicks(0)}>Reset</button>
     <button onClick={() => setNewDate(Date.now())}>date: {newDate}</button>
   </>
 )
