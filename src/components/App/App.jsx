@@ -4,6 +4,7 @@ import Reader from "../Reader/Reader";
 
 // import { useState } from "react"
 // import Timer from "../Timer/Timer"
+import TestAutomobile from "../TestAutomobile/TestAutomobile"
 
 function App() {
   // const [isVisible, setIsVisible] = useState(false);
@@ -11,9 +12,10 @@ function App() {
 
   return(
     <>
-     <div>
+     {/* <div>
       <Reader />
-    </div>
+    </div> */}
+    <TestAutomobile />
     
       {/* <ClickTracker /> */}
       {/* <button onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide' : "show"}</button>
