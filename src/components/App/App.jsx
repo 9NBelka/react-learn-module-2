@@ -1,31 +1,27 @@
+// import ClickTracker from '../ClickTracker/ClickTracker';
+import Reader from '../Reader/Reader';
 
-// import ClickTracker from "../ClickTracker/ClickTracker";
-import Reader from "../Reader/Reader";
-
-// import { useState } from "react"
-// import Timer from "../Timer/Timer"
-import TestAutomobile from "../TestAutomobile/TestAutomobile"
+// import { useState } from 'react';
+// import Timer from '../Timer/Timer';
+// import TestAutomobile from '../TestAutomobile/TestAutomobile';
 
 function App() {
   // const [isVisible, setIsVisible] = useState(false);
 
-
-  return(
+  return (
     <>
-     {/* <div>
-      <Reader />
-    </div> */}
-    <TestAutomobile />
-    
-      {/* <ClickTracker /> */}
-      {/* <button onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide' : "show"}</button>
-      {isVisible && <Timer /> } */}
+      <div>
+        <Reader />
+      </div>
+      {/* <TestAutomobile /> */}
+      {/* <ClickTracker />
+      <button onClick={() => setIsVisible(!isVisible)}>{isVisible ? 'hide' : 'show'}</button>
+      {isVisible && <Timer />} */}
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
 
 // import ClickTracker from "../ClickTracker/ClickTracker"
 // import { useState } from "react"

@@ -1,29 +1,31 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 const TestAutomobile = () => {
-  const [developers, setDevelopers] = useState([]);
+  const [data, setData] = useState(null);  // Для хранения данных
+  const [error, setError] = useState(null);  // Для обработки ошибок
+  const [loading, setLoading] = useState(true);  // Для индикации загрузки
 
-  // Запрос к API при монтировании компонента
   useEffect(() => {
-    fetch('http://109.87.131.1:7070/developers')
-      .then(response => response.json())
-      .then(data => setDevelopers(data))
-      .catch(error => console.error('Error fetching developers:', error));
+      fetch('http://109.87.131.1:3000')  // Пример эндпоинта
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
   }, []);
 
+  if (loading) {
+    return <p>Loading...</p>;  // Индикация загрузки
+  }
+
+  if (error) {
+    return <pre>Error: {error.message}</pre>;  // Отображение ошибки
+  }
+
   return (
-    <div className="developers-list">
-      {developers.length > 0 ? (
-        developers.map(dev => (
-          <div key={dev.id} className="developer-card">
-            <h2>{dev.login}</h2>
-            <p>Skills: {dev.url}</p>
-          </div>
-        ))
-      ) : (
-        <p>Loading developers...</p>
-      )}
+    <div>
+      <h1>Data from API:</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>  {/* Форматируем и отображаем JSON */}
     </div>
   );
 };
